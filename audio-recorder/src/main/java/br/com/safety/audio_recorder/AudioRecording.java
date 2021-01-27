@@ -109,6 +109,21 @@ public class AudioRecording {
         return null;
     }
 
+    public void pauseAudio(RecordingItem recordingItem){
+
+        if (this.mMediaPlayer.isPlaying()){
+
+            this.mMediaPlayer.pause();
+            isPlaying = false;
+        }else
+        {
+            isPlaying = true;
+        }
+
+//        audioListener.onStop(recordingItem);
+
+    }
+
     public void stopAudio(RecordingItem recordingItem){
 
         if (this.mMediaPlayer.isPlaying()){
