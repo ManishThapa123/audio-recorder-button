@@ -112,9 +112,10 @@ public class AudioRecording {
     public void pauseAudio(RecordingItem recordingItem){
 
         if (this.mMediaPlayer.isPlaying()){
-
             this.mMediaPlayer.pause();
+            this.mMediaPlayer.reset();
             isPlaying = false;
+
         }else
         {
             isPlaying = true;
