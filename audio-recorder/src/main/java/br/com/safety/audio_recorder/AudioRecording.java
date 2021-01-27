@@ -115,14 +115,25 @@ public class AudioRecording {
             this.mMediaPlayer.pause();
             this.mMediaPlayer.reset();
             isPlaying = false;
-
         }else
         {
             isPlaying = true;
         }
-
 //        audioListener.onStop(recordingItem);
 
+    }
+
+    public void stopAudioAndInstance(RecordingItem recordingItem){
+        if (this.mMediaPlayer.isPlaying()){
+
+            this.mMediaPlayer.stop();
+            this.mMediaPlayer.reset();
+            this.mMediaPlayer.release();
+            isPlaying = false;
+        }else
+        {
+            isPlaying = true;
+        }
     }
 
     public void stopAudio(RecordingItem recordingItem){
@@ -135,7 +146,6 @@ public class AudioRecording {
         {
             isPlaying = true;
         }
-
 //        audioListener.onStop(recordingItem);
 
     }
