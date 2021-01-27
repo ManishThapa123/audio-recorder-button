@@ -128,7 +128,6 @@ public class AudioRecording {
 
             this.mMediaPlayer.stop();
             this.mMediaPlayer.reset();
-            this.mMediaPlayer.release();
             isPlaying = false;
         }else
         {
